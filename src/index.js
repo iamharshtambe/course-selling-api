@@ -2,6 +2,7 @@ import express from 'express';
 import { connectToDatabase } from './config/db.js';
 import { authRouter } from './routes/authRouter.js';
 import { coursesRouter } from './routes/coursesRouter.js';
+import { adminRouter } from './routes/adminRouter.js';
 
 const app = express();
 const port = 3000;
@@ -9,6 +10,8 @@ const port = 3000;
 app.use('/api/v1/auth', authRouter);
 
 app.use('/api/v1/courses', coursesRouter);
+
+app.use('/api/v1/admin', adminRouter);
 
 connectToDatabase()
    .then(() => {
