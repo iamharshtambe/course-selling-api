@@ -15,7 +15,7 @@ value2 = false;
 value2 = 'Riya';
 
 // ❌ Not allowed — TS says: “I don’t know what this is, so I won’t let you break things”
-let result2 = value2.toUpperCase(); // Error!
+value2.toUpperCase(); // Error!
 
 // ✅ Safe and smart — check the type before use
 if (typeof value2 === 'string') {
