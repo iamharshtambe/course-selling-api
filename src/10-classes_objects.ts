@@ -1,16 +1,22 @@
-// 🚂 A blueprint for trains — defines how every train object should look and behave
+// 🚂 Train class — a blueprint for all kinds of trains
 class Train {
    constructor(
-      public type: string, // e.g., express, passenger, goods
-      public name: string, // train name like 'Shatabdi'
-      public year: number, // year of launch/manufacture
-      public coaches: number, // how many coaches the train has
-      public isRunning: boolean // whether the train is currently running
+      public type: string, // Type of train: express, passenger, goods
+      public name: string, // Name of the train (e.g., Shatabdi)
+      public year: number, // Year the train was launched
+      public coaches: number, // Number of coaches it has
+      public isRunning: boolean // Is the train currently running?
    ) {}
+
+   // 📣 Method to announce train departure
+   trainDepart() {
+      console.log(`${this.name} has ${this.coaches} coaches`);
+   }
 }
 
-// 🛤️ Creating a train instance using the class
+// 🛤️ Creating an instance of Train
 const t1 = new Train('express', 'shatabdi', 1990, 16, true);
 
-// 📦 Logging the train details
+// 📦 Logging train info and triggering the departure method
 console.log(t1);
+t1.trainDepart();
