@@ -1,5 +1,7 @@
 // 🚂 Train class — a blueprint for all kinds of trains
 class Train {
+   static country = 'India';
+
    constructor(
       readonly trainId: string, // Train ID
       public type: string, // Type of train: express, passenger, goods
@@ -36,3 +38,5 @@ console.log(t1);
 t1.trainDepart();
 
 console.log(t1.name);
+
+console.log(Train.country);
